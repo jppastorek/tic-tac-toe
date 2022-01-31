@@ -21,5 +21,9 @@
     border-radius: 5px;
     border-color: white;
     border-style: solid;
-    background-color: rgba(114, 24, 106, 0.7);
+    background-color: rgba(89, 8, 196, 0.747);
+    font: 72px Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
