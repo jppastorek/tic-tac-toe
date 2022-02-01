@@ -32,10 +32,12 @@ const displayController = {
                         cell.innerText = "X";
                         player1.active = false;
                         player2.active = true;
+                        this.checkForWinner()
                     } else if (player2.active) {
                         cell.innerText = "O";
                         player2.active = false;
                         player1.active = true;
+                        this.checkForWinner();
                     }
                     cell.classList.remove("empty");
                 }
@@ -53,8 +55,21 @@ const displayController = {
             [0, 4, 8],
             [2, 4, 6]
         ]
-        const squares = document.querySelectorAll("square");
-
+        let currentState = [];
+        gameBoard.board.forEach((square) => {
+            currentState.push(square.innerText);
+        });
+        let row1 = currentState.slice(0, 3);
+        let row2 = currentState.slice(3, 6);
+        let row3 = currentState.slice(6, 9);
+        row1 = row1.toString();
+        row2 = row2.toString();
+        row3 = row3.toString();
+        if (row1 === "X,X,X" || row2 === "X,X,X" || row3 === "X,X,X") {
+            console.log("x wins");
+        } else if (row1 === "O,O,O" || row2 === "O,O,O" || row3 === "O,O,O") {
+            console.log("o wins");
+        }
     },
 }
 
