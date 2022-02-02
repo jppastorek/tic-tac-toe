@@ -56,29 +56,73 @@ const displayController = {
         row2 = row2.toString();
         row3 = row3.toString();
         if (row1 === "X,X,X" || row2 === "X,X,X" || row3 === "X,X,X") {
-            console.log("x wins");
+            if (row1 === "X,X,X") {
+                gameBoard.board[0].classList.add("winner");
+                gameBoard.board[1].classList.add("winner");
+                gameBoard.board[2].classList.add("winner");
+            } else if (row2 === "X,X,X") {
+                gameBoard.board[3].classList.add("winner");
+                gameBoard.board[4].classList.add("winner");
+                gameBoard.board[5].classList.add("winner");
+            } else if (row3 === "X,X,X") {
+                gameBoard.board[6].classList.add("winner");
+                gameBoard.board[7].classList.add("winner");
+                gameBoard.board[8].classList.add("winner");
+            }
         } else if (row1 === "O,O,O" || row2 === "O,O,O" || row3 === "O,O,O") {
-            console.log("o wins");
+            if (row1 === "O,O,O") {
+                gameBoard.board[0].classList.add("winner");
+                gameBoard.board[1].classList.add("winner");
+                gameBoard.board[2].classList.add("winner");
+            } else if (row2 === "O,O,O") {
+                gameBoard.board[3].classList.add("winner");
+                gameBoard.board[4].classList.add("winner");
+                gameBoard.board[5].classList.add("winner");
+            } else if (row3 === "O,O,O") {
+                gameBoard.board[6].classList.add("winner");
+                gameBoard.board[7].classList.add("winner");
+                gameBoard.board[8].classList.add("winner");
+            }
         } else if (gameBoard.board[0].innerText === "X" && gameBoard.board[3].innerText === "X" && gameBoard.board[6].innerText === "X") { //column 1 good
-            console.log("x wins");
+            gameBoard.board[0].classList.add("winner");
+            gameBoard.board[3].classList.add("winner");
+            gameBoard.board[6].classList.add("winner");
         } else if (gameBoard.board[1].innerText === "X" && gameBoard.board[4].innerText === "X" && gameBoard.board[7].innerText === "X") { //column 2 BAD
-            console.log("x wins");
+            gameBoard.board[1].classList.add("winner");
+            gameBoard.board[4].classList.add("winner");
+            gameBoard.board[7].classList.add("winner");
         } else if (gameBoard.board[2].innerText === "X" && gameBoard.board[5].innerText === "X" && gameBoard.board[8].innerText === "X") { //column 3
-            console.log("x wins");
+            gameBoard.board[2].classList.add("winner");
+            gameBoard.board[5].classList.add("winner");
+            gameBoard.board[8].classList.add("winner");
         } else if (gameBoard.board[0].innerText === "X" && gameBoard.board[4].innerText === "X" && gameBoard.board[8].innerText === "X") {
-            console.log("x wins");
+            gameBoard.board[0].classList.add("winner");
+            gameBoard.board[4].classList.add("winner");
+            gameBoard.board[8].classList.add("winner");
         } else if (gameBoard.board[2].innerText === "X" && gameBoard.board[4].innerText === "X" && gameBoard.board[6].innerText === "X") {
-            console.log("x wins");
+            gameBoard.board[2].classList.add("winner");
+            gameBoard.board[4].classList.add("winner");
+            gameBoard.board[6].classList.add("winner");
         } else if (gameBoard.board[0].innerText === "O" && gameBoard.board[3].innerText === "O" && gameBoard.board[6].innerText === "O") { //column 1 good
-            console.log("o wins");
+            gameBoard.board[0].classList.add("winner");
+            gameBoard.board[3].classList.add("winner");
+            gameBoard.board[6].classList.add("winner");
         } else if (gameBoard.board[1].innerText === "O" && gameBoard.board[4].innerText === "O" && gameBoard.board[7].innerText === "O") { //column 2 BAD
-            console.log("o wins");
+            gameBoard.board[1].classList.add("winner");
+            gameBoard.board[4].classList.add("winner");
+            gameBoard.board[7].classList.add("winner");
         } else if (gameBoard.board[2].innerText === "O" && gameBoard.board[5].innerText === "O" && gameBoard.board[8].innerText === "O") { //column 3
-            console.log("o wins");
+            gameBoard.board[2].classList.add("winner");
+            gameBoard.board[5].classList.add("winner");
+            gameBoard.board[8].classList.add("winner");
         } else if (gameBoard.board[0].innerText === "O" && gameBoard.board[4].innerText === "O" && gameBoard.board[8].innerText === "O") {
-            console.log("o wins");
+            gameBoard.board[0].classList.add("winner");
+            gameBoard.board[4].classList.add("winner");
+            gameBoard.board[8].classList.add("winner");
         } else if (gameBoard.board[2].innerText === "O" && gameBoard.board[4].innerText === "O" && gameBoard.board[6].innerText === "O") {
-            console.log("o wins");
+            gameBoard.board[2].classList.add("winner");
+            gameBoard.board[4].classList.add("winner");
+            gameBoard.board[6].classList.add("winner");
         }
     },
 }

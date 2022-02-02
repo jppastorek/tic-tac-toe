@@ -41,3 +41,8 @@ h1 {
     align-items: center;
     font-size: 72px;
 }
+
+.winner {
+    background-color: red;
+    color: white;
+}
