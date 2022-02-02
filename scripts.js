@@ -45,16 +45,6 @@ const displayController = {
         });
     },
     checkForWinner: function() {
-        const winningCombos = [
-            [0, 1, 2],
-            [3, 4, 5],
-            [6, 7, 8],
-            [0, 3, 6],
-            [1, 4, 7],
-            [2, 5, 8],
-            [0, 4, 8],
-            [2, 4, 6]
-        ]
         let currentState = [];
         gameBoard.board.forEach((square) => {
             currentState.push(square.innerText);
@@ -68,6 +58,26 @@ const displayController = {
         if (row1 === "X,X,X" || row2 === "X,X,X" || row3 === "X,X,X") {
             console.log("x wins");
         } else if (row1 === "O,O,O" || row2 === "O,O,O" || row3 === "O,O,O") {
+            console.log("o wins");
+        } else if (gameBoard.board[0].innerText === "X" && gameBoard.board[3].innerText === "X" && gameBoard.board[6].innerText === "X") { //column 1 good
+            console.log("x wins");
+        } else if (gameBoard.board[1].innerText === "X" && gameBoard.board[4].innerText === "X" && gameBoard.board[7].innerText === "X") { //column 2 BAD
+            console.log("x wins");
+        } else if (gameBoard.board[2].innerText === "X" && gameBoard.board[5].innerText === "X" && gameBoard.board[8].innerText === "X") { //column 3
+            console.log("x wins");
+        } else if (gameBoard.board[0].innerText === "X" && gameBoard.board[4].innerText === "X" && gameBoard.board[8].innerText === "X") {
+            console.log("x wins");
+        } else if (gameBoard.board[2].innerText === "X" && gameBoard.board[4].innerText === "X" && gameBoard.board[6].innerText === "X") {
+            console.log("x wins");
+        } else if (gameBoard.board[0].innerText === "O" && gameBoard.board[3].innerText === "O" && gameBoard.board[6].innerText === "O") { //column 1 good
+            console.log("o wins");
+        } else if (gameBoard.board[1].innerText === "O" && gameBoard.board[4].innerText === "O" && gameBoard.board[7].innerText === "O") { //column 2 BAD
+            console.log("o wins");
+        } else if (gameBoard.board[2].innerText === "O" && gameBoard.board[5].innerText === "O" && gameBoard.board[8].innerText === "O") { //column 3
+            console.log("o wins");
+        } else if (gameBoard.board[0].innerText === "O" && gameBoard.board[4].innerText === "O" && gameBoard.board[8].innerText === "O") {
+            console.log("o wins");
+        } else if (gameBoard.board[2].innerText === "O" && gameBoard.board[4].innerText === "O" && gameBoard.board[6].innerText === "O") {
             console.log("o wins");
         }
     },
