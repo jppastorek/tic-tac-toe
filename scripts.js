@@ -21,7 +21,9 @@ const gameBoard = {
     }
 }
 
+
 gameBoard.create()
+
 
 const displayController = {
     displayMarker: function() {
@@ -125,6 +127,30 @@ const displayController = {
             gameBoard.board[6].classList.add("winner");
         }
     },
+    setPlayer1Name: function() {
+        const button1 = document.querySelector(".button1");
+        const input1 = document.querySelector("#player1name");
+        const modal1 = document.querySelector(".modal1");
+        const modal2 = document.querySelector(".modal2");
+        button1.addEventListener("click", () => {
+            player1.name = input1.value;
+            modal1.classList.add("hidden");
+            modal2.classList.remove("hidden");
+        })
+    },
+    setPlayer2Name: function() {
+        const button2 = document.querySelector(".button2");
+        const input2 = document.querySelector("#player2name");
+        const modal2 = document.querySelector(".modal2");
+        button2.addEventListener("click", () => {
+            player2.name = input2.value;
+            modal2.classList.add("hidden");
+        })
+    },
 }
+
+
+displayController.setPlayer1Name();
+displayController.setPlayer2Name();
 
 displayController.displayMarker();
