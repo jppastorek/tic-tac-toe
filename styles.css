@@ -92,3 +92,46 @@ input {
 .hidden {
     display: none;
 }
+
+h2 {
+    font-size: 36px;
+}
+
+.button-play,
+.button1,
+.button2 {
+    height: 50px;
+    width: 100px;
+    background-color: rgb(29, 212, 22);
+    color: #ececec;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.button-new {
+    height: 50px;
+    width: 100px;
+    background-color: rgb(22, 126, 212);
+    color: #ececec;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.button-new:hover {
+    background-color: rgb(8, 108, 189);
+    cursor: pointer;
+}
+
+.button-play:hover,
+.button1:hover,
+.button2:hover {
+    background-color: rgb(13, 184, 8);
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
